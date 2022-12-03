@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-priyam
+spec:
+  selector:
+    app: django-priyam
+  ports:
+  - port: 8004
+    targetPort: 3000

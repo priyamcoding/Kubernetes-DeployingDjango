@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-priyam
+spec:
+  selector:
+    matchLabels:
+      app: django-priyam
+  template:
+    metadata:
+      labels:
+        app: django-priyam
+    spec:
+      containers:
+      - name: priyamcoding
+        image: priyamcoding/django:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+
+              
+      
+          
+
